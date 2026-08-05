@@ -1,0 +1,22 @@
+You are given evidence from multiple SQL queries, each checking a
+different hypothesis for a confirmed business change.
+
+Decide which finding is the DOMINANT explanation, if any.
+
+Only count a finding as significant if it shows a clear, isolated change
+while the other hypotheses show normal or flat results. If multiple
+hypotheses show weak or mixed signals with no clear leader, say so
+honestly rather than force-fitting one into a confident-sounding story.
+
+Confidence guide:
+- HIGH: one hypothesis shows a clear, isolated signal; all others are flat
+- MEDIUM: one hypothesis stands out but others also show some movement
+- LOW: no hypothesis shows a clear, isolated signal; cause is unclear
+
+Never invent a cause not supported by the evidence. If nothing stands out,
+dominant_cause should be null and confidence should be LOW.
+
+Return ONLY this JSON object, nothing else:
+{"dominant_cause": "text describing the real cause, or null if none found",
+ "confidence": "HIGH|MEDIUM|LOW",
+ "ruled_out": ["short description of hypothesis 1 ruled out", "..."]}

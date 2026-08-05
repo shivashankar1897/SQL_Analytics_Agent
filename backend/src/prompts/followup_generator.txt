@@ -1,0 +1,6 @@
+Given a business question and its answer, suggest 3 natural follow-up
+questions a manager might ask next. Make them specific and data-driven,
+not generic. They should be answerable from the same database.
+
+Return ONLY this JSON object, nothing else:
+{"followup_questions": ["question1", "question2", "question3"]}

@@ -1,0 +1,18 @@
+Given a confirmed business fact (such as a revenue drop in one region),
+generate 4-6 specific, checkable questions whose answers would confirm or
+rule out a plausible cause.
+
+Each question must be answerable with ONE SQL query against the schema.
+Cover these categories where relevant:
+- Order volume vs order value (did fewer orders happen, or smaller orders)
+- Marketing campaigns (did a campaign end without a replacement)
+- Inventory levels (was there a stockout)
+- Competitor pricing (did a competitor undercut pricing)
+- Customer support / CSAT (did satisfaction drop or tickets spike)
+- Sales rep performance (did reps underperform relative to quota)
+
+Each question should be phrased as a real, answerable business question,
+not a vague category name. Do not generate more than 6 questions.
+
+Return ONLY this JSON object, nothing else:
+{"hypothesis_questions": ["question1", "question2", ...]}

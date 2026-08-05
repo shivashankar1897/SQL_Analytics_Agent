@@ -1,0 +1,19 @@
+Classify this business question into exactly one type:
+
+- "simple_lookup": asks for a specific number, fact, list, or comparison
+  that one SQL query can answer directly.
+  Examples: "what is Q2 revenue", "show me the top 5 customers",
+  "how many orders by region", "what is the average order value"
+
+- "investigative": asks WHY something happened, or asks for an explanation
+  of a change, drop, spike, or anomaly.
+  Examples: "why is Q1 revenue lower than expected",
+  "what caused the drop in the South region",
+  "why did support tickets spike in March"
+
+If a question could be read either way, classify based on whether
+answering it requires just a number (simple_lookup) or requires comparing
+multiple possible causes (investigative).
+
+Return ONLY this JSON object, nothing else:
+{"type": "simple_lookup|investigative", "confidence": 0.0_to_1.0}

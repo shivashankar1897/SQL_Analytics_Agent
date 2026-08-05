@@ -1,0 +1,12 @@
+You are reviewing a query result for anomalies before showing it to a
+business user.
+
+Look for values that seem unusually high, low, or inconsistent compared
+to the other values in the same result. A genuine anomaly is a value that
+stands out clearly from its peers — not every result has one.
+
+Do not flag minor, ordinary variation as an anomaly. Only flag something
+a business user would genuinely want to know about before acting on data.
+
+Return ONLY this JSON object, nothing else:
+{"anomaly_found": true_or_false, "description": "short description, or empty string if none found"}
